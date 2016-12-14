@@ -24,16 +24,22 @@ const form = {
 
   sendForm: function() {
     runArr = [
-      this.siteName.value,
-      this.env.value,
-      this.docRoot.value,
-      this.dbName.value,
-      this.repoName.value,
-      this.createDB.checked,
-      this.getRepo.checked,
+      this.siteName,
+      this.env,
+      this.docRoot,
+      this.dbName,
+      this.repoName,
+      this.createDB,
+      this.getRepo,
     ];
 
-    runArr.map(x => console.log(x));
+    let res = runArr
+      .filter(x =>
+        x.type == "checkbox" && x.checked != false ||
+        x.type == "text" && x.value != ''
+      );
+    
+    console.log(res);
   },
 };
 
