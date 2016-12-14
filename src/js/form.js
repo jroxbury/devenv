@@ -36,8 +36,7 @@ const form = {
     let res = runArr
       .filter(x =>
         x.type == "checkbox" && x.checked != false ||
-        x.type == "text" && x.value != ''
-      );
+        x.type == "text" && x.value != '');
     
     console.log(res);
   },
