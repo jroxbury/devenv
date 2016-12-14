@@ -1,0 +1,8 @@
+.form-main {
+  display: flex;
+  flex-direction: column;
+}
+.submit-btn {
+  margin-top: 10px;
+  width: 10%;
+}

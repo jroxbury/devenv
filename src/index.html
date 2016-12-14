@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>devenv</title>
+    <link rel="stylesheet" href="css/form.css">
+  </head>
+  <body>
+    <form class="form-main" action="">
+      <label for="sitename" class="sitename-heading">Site Name:</label>
+      <input id="siteName" type="text" name="sitename" value="" />
+
+      <label for="environment" class="env-heading">Environment:</label>
+      <input id="env" type="text" name="environment" value="" />
+
+      <label for="docroot" class="docroot-heading">Document Root Name:</label>
+      <input id="docRoot" type="text" name="docroot" value="" />
+
+      <label for="databasechk" class="db-label">Create a database?</label>
+      <input id="dbChk" type="checkbox" name="databasechk" />
+
+      <label for="dbname" class="db-name-label">Database Name:</label>
+      <input id="dbName" type="text" name="dbname" value="" />
+
+      <label for="repochk" class="repo-label">In a repo?</label>
+      <input id="repoChk" type="checkbox" name="repochk" />
+
+      <label for="reponame" class="reponame-label">Repository Name</label>
+      <input id="repoName" type="text" name="reponame" value="" />
+
+      <button class="submit-btn" type="submit">Create!</button>
+    </form>
+
+    <script src="js/form.js"></script>
+  </body>
+</html>
