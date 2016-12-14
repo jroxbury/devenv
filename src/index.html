@@ -16,13 +16,21 @@
       <input id="docRoot" type="text" name="docroot" value="" />
 
       <label for="databasechk" class="db-label">Create a database?</label>
-      <input id="dbChk" type="checkbox" name="databasechk" />
+      <!--<input id="dbChk" type="checkbox" name="databasechk" />-->
+      <select name="databasechk" class="dropdown" id="dbChk">
+        <option value="yes">Yes</option>
+        <option value="no" selected="selected">No</option>
+      </select>
 
       <label for="dbname" class="db-name-label">Database Name:</label>
       <input id="dbName" type="text" name="dbname" value="" />
 
       <label for="repochk" class="repo-label">In a repo?</label>
-      <input id="repoChk" type="checkbox" name="repochk" />
+      <!--<input id="repoChk" type="checkbox" name="repochk" />-->
+      <select name="repochk" class="dropdown" id="repoChk">
+        <option value="yes">Yes</option>
+        <option value="no" selected="selected">No</option>
+      </select>
 
       <label for="reponame" class="reponame-label">Repository Name</label>
       <input id="repoName" type="text" name="reponame" value="" />
