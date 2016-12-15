@@ -2,10 +2,10 @@
 <html>
   <head>
     <title>devenv</title>
-    <link rel="stylesheet" href="css/form.css">
+    <!-- <link rel="stylesheet" href="css/form.css"> -->
   </head>
   <body>
-    <form class="form-main" action="">
+    <form class="form-main" action="/" method="POST">
       <label for="sitename" class="sitename-heading">Site Name:</label>
       <input id="siteName" type="text" name="sitename" value="" />
 
@@ -16,28 +16,26 @@
       <input id="docRoot" type="text" name="docroot" value="" />
 
       <label for="databasechk" class="db-label">Create a database?</label>
-      <!--<input id="dbChk" type="checkbox" name="databasechk" />-->
       <select name="databasechk" class="dropdown" id="dbChk">
         <option value="yes">Yes</option>
-        <option value="no" selected="selected">No</option>
+        <option value="" selected="selected">No</option>
       </select>
 
       <label for="dbname" class="db-name-label">Database Name:</label>
       <input id="dbName" type="text" name="dbname" value="" />
 
       <label for="repochk" class="repo-label">In a repo?</label>
-      <!--<input id="repoChk" type="checkbox" name="repochk" />-->
       <select name="repochk" class="dropdown" id="repoChk">
         <option value="yes">Yes</option>
-        <option value="no" selected="selected">No</option>
+        <option value="" selected="selected">No</option>
       </select>
 
       <label for="reponame" class="reponame-label">Repository Name</label>
       <input id="repoName" type="text" name="reponame" value="" />
 
-      <a class="submit-btn" href="javascript: form.sendForm()">Create!</a>
+      <input type="submit" name="submitForm" class="submit-btn" />
     </form>
 
-    <script src="js/form.js"></script>
+    <!-- <script src="js/form.js"></script> -->
   </body>
 </html>
