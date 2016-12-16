@@ -1,9 +1,9 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var path = require('path');
-var form = require('./js/form.js');
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const Command = require('./lib/commands.js');
 
-var app = express();
+const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -12,9 +12,11 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
-	var resultObj = req.body;
+	const resultObj = req.body;
+	const cmd = new Command(resultObj);
 
-	form.checkDirStructure(resultObj);
+	console.log(resultObj);
+	cmd.checkDirStructure();
 
 	res.sendFile(path.join(__dirname + '/index.html'));
 });
