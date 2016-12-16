@@ -39,7 +39,7 @@ Command.prototype.manageDirStructure = function() {
   //   });
   //   return;
   // };
-   // See if the form is going to return yes or no to clone a repo
+  // See if the form is going to return yes or no to clone a repo
   const chosePath = (this.cloneRepo != '') ? this.pathWithRepo : this.pathNoRepo;
   // Check if dir exists
   if (fs.existsSync(chosePath)) {
@@ -63,6 +63,7 @@ Command.prototype.manageDirStructure = function() {
     // @TODO make directory structure
     console.log(chosePath);
     // this.mkDir(chosePath);
+
   }
 };
 
@@ -71,11 +72,13 @@ Command.prototype.manageDirStructure = function() {
  * @return void
  *
  * @TODO: needs more thought
+
  */
 Command.prototype.lsDir = function() {
   fs.readdir(this.path, (err, files) => {
     files.forEach(file => {
       console.log(file);
+
     });
   });
 };
