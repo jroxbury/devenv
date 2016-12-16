@@ -6,6 +6,7 @@ const Command = require('./lib/commands.js');
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(express.static('css'));
 
 app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
@@ -16,7 +17,7 @@ app.post('/', function(req, res) {
 	const cmd = new Command(resultObj);
 
 	console.log(resultObj);
-	cmd.checkDirStructure();
+	cmd.manageDirStructure();
 
 	res.sendFile(path.join(__dirname + '/index.html'));
 });
